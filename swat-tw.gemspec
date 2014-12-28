@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = 'Tool for end-to-end tests'
   s.authors     = ['Vitaly Tarasenko']
   s.email       = 'vetal.tarasenko@gmail.com'
-  s.files       = ['lib/swat-tw.rb']
+  s.files       = ['lib/swat_tw.rb']
 
   s.add_dependency('swat-capybara', '~> 0.0.0')
 
