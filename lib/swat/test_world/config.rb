@@ -4,9 +4,13 @@ module Swat
 
     class Config
 
+      class EmptyTestWorld < TestWorld::Base
+        def init_situation; end
+      end
+
       DEFAULT_OPTIONS = {
         moment: '2014-10-08 12:30:00 UTC',
-        klass: TestWorld::Base,
+        klass: EmptyTestWorld,
       }
 
       def initialize(opts = {})
@@ -18,7 +22,7 @@ module Swat
       end
 
       def klass
-        unless options[:klass] <= TestWorld::Base
+        unless options[:klass] < TestWorld::Base
           raise '"klass" should be subclass of TestWorld::Base'
         end
         options[:klass]
