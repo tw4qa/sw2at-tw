@@ -2,7 +2,7 @@ module Swat
   module TestWorld
     module RspecSetup
 
-      def init_tw(options = BASE_OPTIONS)
+      def init_tw(options = TestWorld.config.klass::BASE_OPTIONS)
         before(:each) do
           Timecop.travel( TestWorld.config.klass.moment )
           @tw = TestWorld.config.klass.new(options)
