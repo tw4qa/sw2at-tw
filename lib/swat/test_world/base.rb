@@ -13,7 +13,7 @@ module Swat
       end
 
       def self.moment
-        m = TestWorld.config[:moment]
+        m = TestWorld.config.options[:moment]
         m.is_a?(Time) ? m : Time.parse(m.to_s)
       end
 
