@@ -18,7 +18,7 @@ module Swat
       end
 
       def klass
-        unless options[:klass].is_a? TestWorld::Base
+        unless options[:klass] <= TestWorld::Base
           raise '"klass" should be subclass of TestWorld::Base'
         end
         options[:klass]
