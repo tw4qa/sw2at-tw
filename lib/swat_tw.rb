@@ -5,7 +5,7 @@ module Swat
 
     mattr_reader :config
 
-    def setup(opts)
+    def self.setup(rspec_config, opts)
       @config = Config.new(opts)
     end
 
