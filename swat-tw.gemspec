@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.files       = ['lib/swat_tw.rb']
 
   s.add_dependency('swat-capybara', '~> 0.0.0')
+  s.add_dependency('timecop', '~> 0.7.1')
 
   s.homepage    = 'http://tw.coming.soon'
   s.license     = 'MIT'
