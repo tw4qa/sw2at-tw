@@ -14,6 +14,7 @@ module Swat
 
       def self.moment
         m = TestWorld.config.options[:moment]
+        return unless m
         m.is_a?(Time) ? m : Time.parse(m.to_s)
       end
 
