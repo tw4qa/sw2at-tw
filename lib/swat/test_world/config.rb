@@ -13,8 +13,9 @@ module Swat
         klass: EmptyTestWorld,
       }
 
-      def initialize(opts = {})
+      def initialize(rspec_config, opts = {})
         @options = DEFAULT_OPTIONS.merge opts
+        rspec_config.extend RspecSetup
       end
 
       def options
