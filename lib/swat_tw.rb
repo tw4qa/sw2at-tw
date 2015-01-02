@@ -2,7 +2,7 @@ module Swat
   module TestWorld
     require 'swat/test_world/base'
     require 'swat/test_world/config'
-    require 'swat/test_world/generators/new_generator'
+    require 'swat/test_world/generators/install_generator'
 
     def self.setup(rspec_config, opts)
       @config = Config.new(rspec_config, opts)
