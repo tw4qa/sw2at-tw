@@ -14,9 +14,9 @@ module Swat
             create_methods
             gsub_file main_file, '# You can include your own modules here' do
               <<MODULES
-    require 'swat/modules/helpers.rb'
-    require 'swat/modules/methods.rb'
-    include Methods
+require 'swat/modules/helpers.rb'
+require 'swat/modules/methods.rb'
+include Methods
 MODULES
             end
           end
@@ -40,7 +40,7 @@ MODULES
           swat_gsub file
         end
 
-        def swat_gsub file
+        def swat_gsub(file)
           gsub_file file, 'TwSubclass' do
             name.camelize
           end
