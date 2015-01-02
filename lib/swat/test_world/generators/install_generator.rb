@@ -12,14 +12,20 @@ module Swat
           if ENV['with_modules']
             create_helpers
             create_methods
+            gsub_file main_file, '# You can include your own modules here' do
+              <<MODULES
+    require 'swat/modules/helpers.rb'
+    require 'swat/modules/methods.rb'
+    include Methods
+MODULES
+            end
           end
         end
 
         private
         def create_tw
-          file = "lib/swat/#{name}.rb"
-          template 'test_world_subclass.rb', file
-          swat_gsub file
+          template 'test_world_subclass.rb', main_file
+          swat_gsub main_file
         end
 
         def create_helpers
@@ -38,6 +44,10 @@ module Swat
           gsub_file file, 'TwSubclass' do
             name.camelize
           end
+        end
+
+        def main_file
+          "lib/swat/#{name}.rb"
         end
       end
     end

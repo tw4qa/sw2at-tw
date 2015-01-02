@@ -1,7 +1,11 @@
 require 'swat'
 
-class TwSubclass < Swat::TestWorld::Base
+# Instance of this class will be available as @tw variable inside of RSpec context
 
+class TwSubclass < Swat::TestWorld::Base
+  # You can include your own modules here
+
+  # Define your options and situation below
   BASE_OPTIONS = {}
   DEFAULT_OPTIONS = {}
   SITUATIONS = {}

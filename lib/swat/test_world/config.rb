@@ -17,6 +17,7 @@ module Swat
       def initialize(rspec_config, opts = {})
         @options = DEFAULT_OPTIONS.merge opts
         rspec_config.extend RspecSetup
+        rspec_config.include klass::Helpers if defined? klass::Helpers
       end
 
       def options
