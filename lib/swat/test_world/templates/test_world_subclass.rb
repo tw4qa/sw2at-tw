@@ -14,11 +14,11 @@ class TwSubclass < Swat::TestWorld::Base
     # implement your situations
   end
 
-  def self.before_each(context)
+  def before_each(example, context)
     # do something
   end
 
-  def self.after_each(context)
+  def after_each(example, context)
     # do something
   end
 

@@ -42,11 +42,11 @@ module Swat
         raise 'method "init_situation" should be implemented in subclass'
       end
 
-      def self.before_each(context)
+      def before_each(example, context)
         #can be implemented in subclass
       end
 
-      def self.after_each(context)
+      def after_each(example, context)
         #can be implemented in subclass
       end
 
