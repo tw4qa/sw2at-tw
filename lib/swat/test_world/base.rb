@@ -24,6 +24,14 @@ module Swat
 
       alias_method :now, :moment
 
+      def before_each(example, context)
+        #can be implemented in subclass
+      end
+
+      def after_each(example, context)
+        #can be implemented in subclass
+      end
+
       protected
 
       def base_options
@@ -40,14 +48,6 @@ module Swat
 
       def init_situation
         raise 'method "init_situation" should be implemented in subclass'
-      end
-
-      def before_each(example, context)
-        #can be implemented in subclass
-      end
-
-      def after_each(example, context)
-        #can be implemented in subclass
       end
 
       private
