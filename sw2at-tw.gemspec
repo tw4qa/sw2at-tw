@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
     "lib/swat/test_world/templates/test_world_subclass.rb",
     "sw2at-tw.gemspec"
   ]
-  s.homepage = "http://github.com/tw4qa/sw2at-tw"
+  s.homepage = "http://github.com/tarvit/sw2at-tw"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.2.2"
   s.summary = "Swat Test World - Helper for test data generation."
