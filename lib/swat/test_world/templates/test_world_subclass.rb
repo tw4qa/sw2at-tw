@@ -1,4 +1,4 @@
-require 'swat'
+require 'sw2at'
 
 # Instance of this class will be available as @tw variable inside of RSpec context
 
