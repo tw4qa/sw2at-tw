@@ -17,9 +17,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "sw2at-tw"
   gem.homepage = "http://github.com/tarvit/sw2at-tw"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "vitaliyt@interlink-ua.com"
+  gem.summary = %Q{ Swat Test World - Helper for test data generation. }
+  gem.description = %Q{ You can define your own strategies for test data generation. And simply create them in RSpec tests. }
+  gem.email = "vetal.tarasenko@gmail.com"
   gem.authors = ["Vitaly Tarasenko"]
   # dependencies defined in Gemfile
 end
