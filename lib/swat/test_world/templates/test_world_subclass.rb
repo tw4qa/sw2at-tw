@@ -1,4 +1,5 @@
-require 'sw2at'
+require 'sw2at-tw'
+require 'timecop'
 
 # Instance of this class will be available as @tw variable inside of RSpec context
 
