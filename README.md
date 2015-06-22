@@ -4,6 +4,7 @@ Gem for simplying initialization of complex data in your tests.
 
 ## How to install
 
+Check this [example](https://github.com/tw4qa/swat-tw-example) or follow instructions below.
 
 `gem install rails`
 
