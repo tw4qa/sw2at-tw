@@ -58,11 +58,13 @@ gem 'sw2at-tw', '0.0.3'
 
 `bundle install`
 
-Create your own TestWorld class
+Create your own TestWorld class.
+
+"AppTestWorld" is a name of your Swat::TestWorld subclass, you can pass any name here.
 
 `rails g swat:test_world:install AppTestWorld`
 
-Edit your new class in [Rails.root]/lib/swat/AppTestWorld.rb
+Edit your new class in Rails.root/lib/swat/AppTestWorld.rb
 Add Methods:
 ```ruby
   def init_situation
@@ -80,7 +82,7 @@ Add Methods:
   end
 ```
 
-Configure RSpec, add lines tp [Rails.root]/spec/spec_helper.rb
+Configure RSpec, add lines tp Rails.root/spec/spec_helper.rb
 
 ```ruby
 require 'sw2at-tw'
@@ -88,7 +90,7 @@ require_relative '../lib/swat/AppTestWorld'
 Swat::TestWorld.setup(config, klass: AppTestWorld)
 ```
 
-Use helpers in your test. [Rails.root]/spec/models/user_spec.rb
+Use helpers in your test. Rails.root/spec/models/user_spec.rb
 
 ```ruby
 require 'rails_helper'
