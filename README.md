@@ -71,7 +71,7 @@ Add Methods:
     end
 
     if @options[:josh]
-      User.create(email: 'josh.doe@gmail.com', full_name: 'Johs Doe')
+      User.create(email: 'josh.doe@gmail.com', full_name: 'Josh Doe')
     end
   end
   
@@ -121,6 +121,14 @@ RSpec.describe User, type: :model do
 
     it 'should have Users' do
       expect(User.all.map(&:full_name)).to eq([ 'John Smith', 'Josh Doe' ])
+    end
+  end
+  
+  context 'Methods' do
+    init_tw
+
+    it 'should call Test World methods' do
+      @tw.some_very_specific_logic
     end
 
   end
