@@ -1,6 +1,5 @@
 source "http://rubygems.org"
 
-gem 'sw2at-capybara', '~> 0.0.1'
 gem 'timecop', '~> 0.7.1'
 
 group :development do
