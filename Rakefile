@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "sw2at-tw"
-  gem.homepage = "http://github.com/tarvit/sw2at-tw"
+  gem.homepage = "http://github.com/tw4qa/sw2at-tw"
   gem.license = "MIT"
   gem.summary = %Q{ Swat Test World - Helper for test data generation. }
   gem.description = %Q{ You can define your own strategies for test data generation. And simply create them in RSpec tests. }
