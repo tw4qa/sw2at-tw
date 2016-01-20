@@ -58,6 +58,10 @@ module Swat
         raise 'method "init_situation" should be implemented in subclass'
       end
 
+      def load_tw_situation(situation={})
+        raise 'method "load_tw_situation" should be implemented in subclass'
+      end
+
       private
 
       def init_options(opts)
@@ -86,12 +90,13 @@ module Swat
       def create_or_load_dump
         if File.exists? @dumpfile
           load_dump
+          load_tw_situation(@situation)
         else
           init_situation
           create_dump
         end
       end
-      
+
     end
   end
 end
