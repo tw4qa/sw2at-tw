@@ -10,7 +10,7 @@ module Swat
         @options = init_options(opts)
         @dumps_directory = "#{Rails.root}/dumps"
         @dumpfile = @dumps_directory + "/#{@situation}.sql"
-        @db_config = Rails.application.config.database_configuration['test']
+        @db_config = Rails.application.config.database_configuration[Rails.env]
         puts 'start - ' + Time.now.to_i.to_s
         if @situation
           create_or_load_dump
